@@ -1,10 +1,16 @@
 const path = require('path');
+const webpack = require('webpack');
+//const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   mode: 'development',
   devServer: {
     contentBase: 'dist',
-    overlay: true
+    hot: true,
+    overlay: true,
+    stats: {
+      colors: true
+    }
   },
   entry: {
     index: './src/index.js'
@@ -59,5 +65,9 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    //new DashboardPlugin()
+  ]
 };
