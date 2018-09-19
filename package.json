@@ -5,32 +5,30 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config=webpack.dev.js",
-    "start": "webpack-dev-server --config=webpack.dev.js",
-    "dev": "nodemon --watch webpack.dev.js --watch src/server src/server/devServer.js",
+    "dev": "nodemon --watch webpack.dev.js --watch public --watch src/server/main.js src/server/devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "style-loader": "^0.23.0",
-    "webpack": "^4.19.0",
+    "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0"
   },
   "devDependencies": {
-    "webpack-dashboard": "^2.0.0",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "nodemon": "^1.18.4",
     "webpack-dev-middleware": "^3.3.0",
-    "webpack-dev-server": "^3.1.8",
     "webpack-hot-middleware": "^2.24.0"
   }
 }

@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   entry: {
-    index: './src/index.js'
+    index: ['webpack-hot-middleware/client', './src/main.js']
   },
   output: {
     filename: '[name]-bundle.js',
@@ -22,6 +22,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
       {
         test: /\.css$/,
         use: [

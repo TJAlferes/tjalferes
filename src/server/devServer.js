@@ -1,4 +1,4 @@
-require('babel-register');
+require('@babel/register');
 
 const webpack = require('webpack');
 const express = require('express');
@@ -12,7 +12,7 @@ const compiler = webpack(config);
 
 
 
-const webpackDashboardPlugin = require('webpack-dashboard/plugin');
+//const webpackDashboardPlugin = require('webpack-dashboard/plugin');
 const webpackDevMiddleware = require(
   'webpack-dev-middleware'
 )(
@@ -23,11 +23,11 @@ const webpackHotMiddleware = require('webpack-hot-middleware')(compiler);
 
 
 
-compiler.apply(new webpackDashboardPlugin());
+//compiler.apply(new webpackDashboardPlugin());
 
 
 
-// these three must be in this order
+// first three must be in this order
 app.use(webpackDevMiddleware);
 app.use(webpackHotMiddleware);
 app.use(express.static("dist"));
