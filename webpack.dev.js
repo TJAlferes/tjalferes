@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-//const DashboardPlugin = require('webpack-dashboard/plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   entry: {
-    index: ['webpack-hot-middleware/client', './src/main.js']
+    index: './src/main.js'
   },
   output: {
     filename: '[name]-bundle.js',
@@ -42,15 +42,6 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              name: '[name].html'
-            }
-          },
-          {
-            loader: 'extract-loader'
-          },
-          {
             loader: 'html-loader',
             options: {
               attrs: ['img:src']
@@ -73,6 +64,8 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    //new DashboardPlugin()
+    new HTMLWebpackPlugin({
+      template: './public/index.html'
+    })
   ]
 };

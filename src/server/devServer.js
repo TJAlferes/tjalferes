@@ -12,7 +12,6 @@ const compiler = webpack(config);
 
 
 
-//const webpackDashboardPlugin = require('webpack-dashboard/plugin');
 const webpackDevMiddleware = require(
   'webpack-dev-middleware'
 )(
@@ -20,10 +19,6 @@ const webpackDevMiddleware = require(
   config.devServer
 );
 const webpackHotMiddleware = require('webpack-hot-middleware')(compiler);
-
-
-
-//compiler.apply(new webpackDashboardPlugin());
 
 
 
