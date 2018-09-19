@@ -12,6 +12,7 @@ module.exports = {
       colors: true
     }
   },
+  devtool: 'source-map',
   entry: {
     index: './src/main.js'
   },

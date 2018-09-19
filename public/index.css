@@ -3,8 +3,29 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.container {
+  display: grid;
+  grid-template-rows: 92px auto 92px;
+  grid-template-areas: none;
+  min-height: 100vh;
+}
 header {
+
+}
+main {
+  background-color: #eee;
+}
+footer {
+  background-color: rgb(71, 44, 102);
+  color: rgb(241, 196, 45);
+}
+.header-top {
+  height: 22px;
   background-color: #000;
-  height: 20px;
+  color: #eee;
+}
+.header-bottom {
+  height: 70px;
+  background-color: #fff;
+  color: #eee;
 }

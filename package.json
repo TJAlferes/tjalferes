@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config=webpack.dev.js",
-    "dev": "nodemon --watch webpack.dev.js --watch public --watch src/server/main.js src/server/devServer.js",
+    "dev": "nodemon --inspect --watch webpack.dev.js --watch src/main.js src/server/devServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
