@@ -1,29 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  devServer: {
-    contentBase: 'dist',
-    hot: true,
-    overlay: true,
-    stats: {
-      colors: true
-    }
-  },
-  devtool: 'source-map',
-  entry: {
-    index: [
-      'webpack-hot-middleware/client?reload=true',
-      './src/main.js'
-    ]
-  },
-  output: {
-    filename: '[name]-bundle.js',
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/'
-  },
+  mode: 'production',
+  entry: '',
+  output: '',
   module: {
     rules: [
       {
@@ -35,7 +19,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'MiniCSSExtractPlugin.loader'
           },
           {
             loader: 'css-loader'
@@ -75,9 +59,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new HTMLWebpackPlugin({
-      template: './public/index.html'
-    })
+    new OptimizeCSSAssetsPlugin,
+    new MiniCSSExtractPlugin({
+      filename: '[name]-[contenthash].css'
+    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new UglifyJSPlugin()
   ]
 };

@@ -10,7 +10,9 @@
   min-height: 100vh;
 }
 header {
-
+  background-color: #000;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 main {
   background-color: #eee;
@@ -20,12 +22,29 @@ footer {
   color: rgb(241, 196, 45);
 }
 .header-top {
-  height: 22px;
-  background-color: #000;
-  color: #eee;
+  height: 21px;
+  padding-top: 2px;
+}
+.header-top a {
+  border: 1px dashed #999;
+  padding: 1px 5px;
+  color: #bbb;
+  text-decoration: none;
 }
 .header-bottom {
-  height: 70px;
-  background-color: #fff;
-  color: #eee;
+  height: 71px;
+  color: #ddd;
+  padding-top: 5px;
+}
+.header-bottom span {
+  display: block;
+}
+.website-title {
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 5px;
+}
+.website-subtitle {
+  font-style: italic;
+  padding-left: 5px;
 }
