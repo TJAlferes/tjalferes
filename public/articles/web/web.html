@@ -3,104 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Web Articles</title>
-	<link href="favicon.ico" rel="shortcut icon">
-	<style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html {
-      margin: 0 auto 0 auto;
-      font-size: 10px;
-    }
-    body {
-      width: 100%;
-      margin: inherit;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      width: 1280px;
-      margin: inherit;
-      padding-top: 20px;
-    }
-    .languages,
-    .tools {
-      width: 320px;
-      margin: 20px auto 0 auto;
-    }
-    .topic a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 300px;
-      height: 112px;
-      margin: 0 auto 10px auto;
-      border: 1px solid #ddd;
-      border-radius: 2px;
-      padding: 5px;
-    }
-    .topic a:hover,
-    .topic a:active {
-      border-color: #aaa;
-      cursor: pointer;
-      cursor: hand;
-    }
-    .topic_image,
-    .topic_title {
-      display: block;
-      width: 100px;
-      height: max-content;
-    }
-    .topic_title {
-      font-size: 1.4rem;
-    }
-    h1 {
-      margin: 0 auto 16px auto;
-      font-size: 2.6rem;
-    }
-    h2 {
-      margin-bottom: 8px;
-      font-size: 2rem;
-    }
-    img {
-      margin: 0 auto 0 auto;
-    }
-    p {
-      font-size: 1.4rem;
-    }
-
-    /* mobile */
-    @media (max-width: 599px) {
-
-    }
-
-    /* tablet (portrait) */
-    @media (min-width: 600px) {
-
-    }
-
-    /* tablet (landscape)*/
-    @media (min-width: 900px) {
-      
-    }
-
-    /* desktop */
-    @media (min-width: 1200px) {
-      
-    }
-	</style>
+	<title>Web Articles - TJALFERES.net</title>
+	<link href="images/favicon.ico" rel="shortcut icon">
+  <link href="index.css" rel="stylesheet">
+  <link href="web.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
     <header>
-      Header
+      <div class="header-top">
+        <a href="/index.html">HOME</a>
+        <a href="/biography/biography.html">BIOGRAPHY</a>
+        <a href="/paintings/paintings.html">PAINTINGS</a>
+        <a href="/sites/sites.html">SITES</a>
+        <a href="/articles/articles.html" id="current-page">ARTICLES</a>
+        <a href="/books/books.html">BOOKS</a>
+      </div>
+      <div class="header-bottom">
+        <div class="logo">
+          <span class="website-title">TJALFERES.net</span>
+          <span class="website-subtitle">Website of Timothy James Alferes</span>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -326,10 +250,12 @@
 
       </div>
     </main>
-
     <footer>
-      Footer
+      <a>Footer Link</a>
+      <a>Footer Link</a>
+      <a>Footer Link</a>
     </footer>
-	</div>
+  </div>
+  <script src="/index-bundle.js"></script>
 </body>
 </html>

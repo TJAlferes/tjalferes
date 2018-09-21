@@ -1,0 +1,91 @@
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin: 0 auto 0 auto;
+  font-size: 10px;
+}
+body {
+  width: 100%;
+  margin: inherit;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 1280px;
+  margin: inherit;
+  padding-top: 20px;
+}
+*/
+.languages,
+.tools {
+  width: 320px;
+  margin: 20px auto 0 auto;
+}
+.topic a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 112px;
+  margin: 0 auto 10px auto;
+  border: 1px solid #fff;
+  padding: 5px;
+  background-color: #fff;
+}
+.topic a:hover,
+.topic a:active {
+  border-color: #aaa;
+  cursor: pointer;
+  cursor: hand;
+}
+.topic_image,
+.topic_title {
+  display: block;
+  width: 100px;
+  height: max-content;
+}
+.topic_title {
+  font-size: 1.4rem;
+}
+h1 {
+  margin: 0 auto 16px auto;
+  font-size: 2.6rem;
+}
+h2 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+img {
+  margin: 0 auto 0 auto;
+}
+p {
+  font-size: 1.4rem;
+}
+
+/* mobile */
+@media (max-width: 599px) {
+
+}
+
+/* tablet (portrait) */
+@media (min-width: 600px) {
+
+}
+
+/* tablet (landscape)*/
+@media (min-width: 900px) {
+  
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  
+}

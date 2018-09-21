@@ -3,6 +3,9 @@ const webpack = require('webpack');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const BundleAnalyzerPlugin = require(
+  'webpack-bundle-analyzer'
+).BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'production',
@@ -64,6 +67,7 @@ module.exports = {
       filename: '[name]-[contenthash].css'
     }),
     new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
+    new BundleAnalyzerPlugin()
   ]
 };

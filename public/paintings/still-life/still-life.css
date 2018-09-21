@@ -1,0 +1,7 @@
+#painting {
+  background-color: #000;
+}
+#painting img {
+  display: block;
+  margin: 0 auto;
+}
