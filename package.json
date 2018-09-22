@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --config=webpack.prod.js",
+    "build": "NODE_ENV=production rimraf dist && webpack --config=webpack.prod.js --progress --profile --color",
     "dev": "nodemon --inspect --watch webpack.dev.js --watch src/main.js src/server/devServer.js",
     "prod": "NODE_ENV=production node src/server/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.1.5",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
@@ -22,6 +23,7 @@
     "mini-css-extract-plugin": "^0.4.3",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss": "^7.0.2",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.23.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.19.1",
@@ -39,6 +41,6 @@
     "precss": "^3.1.2",
     "webpack-bundle-analyzer": "^3.0.2",
     "webpack-dev-middleware": "^3.3.0",
-    "webpack-hot-middleware": "^2.24.1"
+    "webpack-hot-middleware": "^2.24.2"
   }
 }
