@@ -58,3 +58,11 @@ footer {
 #home {
   padding: 20px;
 }
+#social-media-links {
+  width: fit-content;
+  margin: 20px auto;
+}
+#social-media-links img {
+  border: 1px solid rgb(58, 28, 94);
+  border-radius: 4px;
+}

@@ -45,19 +45,30 @@ module.exports = {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
-          {loader: 'style-loader'},
-          {loader: 'css-loader', options: {importLoaders: 1}},
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
+            }
+          },
+          'postcss-loader'
+          /*
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
               plugins: () => [
                 autoprefixer({
-                  browsers: ["> 1%", "last 2 versions"]
+                  browsers: [
+                    "> 1%",
+                    "last 2 versions"
+                  ]
                 })
               ]
             }
           }
+          */
         ]
       },
       /*
