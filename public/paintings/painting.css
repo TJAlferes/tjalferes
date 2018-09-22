@@ -1,0 +1,19 @@
+#painting {
+  padding: 20px;
+  background-color: #000;
+}
+#painting img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 4px;
+}
+#name, #info {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  color: #ddd;
+}
+#name {
+  font-style: italic;
+  font-weight: 900;
+}
