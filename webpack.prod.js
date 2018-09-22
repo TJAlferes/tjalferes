@@ -2,15 +2,16 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+//const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const BundleAnalyzerPlugin = require(
+/*const BundleAnalyzerPlugin = require(
   'webpack-bundle-analyzer'
-).BundleAnalyzerPlugin;
+).BundleAnalyzerPlugin;*/
 
 module.exports = {
   mode: 'production',
+  devtool: 'source-map',
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -72,6 +73,7 @@ module.exports = {
         ]
       },
       */
+      /*
       {
         test: /\.hbs$/,
         use: [
@@ -80,6 +82,7 @@ module.exports = {
           }
         ]
       },
+      */
       {
         test: /\.(png|jp?g|gif)$/,
         use: [
@@ -95,12 +98,12 @@ module.exports = {
   },
   plugins: [
     new OptimizeCSSAssetsPlugin,
-    new MiniCSSExtractPlugin({
+    /*new MiniCSSExtractPlugin({
       filename: '[name]-[contenthash].css'
-    }),
+    }),*/
     new webpack.EnvironmentPlugin(['NODE_ENV']),
     new UglifyJSPlugin(),
-    new BundleAnalyzerPlugin(),
+    //new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       //template: './public/index.html',
       template: __dirname + '/public/index.html',
