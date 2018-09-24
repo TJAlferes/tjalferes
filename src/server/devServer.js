@@ -26,7 +26,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')(compiler);
 app.use(webpackDevMiddleware);
 app.use(webpackHotMiddleware);
 app.use(express.static("dist"));
-app.use(express.static("public"));
+app.use(express.static("src"));
 
 
 

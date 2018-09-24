@@ -1,8 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 //const autoprefixer = require('autoprefixer');
+const CleanPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 /*const BundleAnalyzerPlugin = require(
@@ -11,7 +12,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  devtool: 'source-map',
+  //devtool: 'source-map',
   entry: {
     main: ['./src/main.js']
   },
@@ -23,30 +24,26 @@ module.exports = {
     //path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          path.resolve(__dirname, 'src/server/devServer.js')
+        ],
         loader: 'babel-loader'
       },
-      /*
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'MiniCSSExtractPlugin.loader'
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
-      },
-      */
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
+          //'style-loader',
+          MiniCSSExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -74,13 +71,22 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        exclude: path.resolve(__dirname, 'src/index.html'),
         use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+          /*
           {
             loader: 'html-loader',
             options: {
               attrs: ['img:src']
             }
           }
+          */
         ]
       },
       /*
@@ -94,30 +100,34 @@ module.exports = {
       },
       */
       {
-        test: /\.(png|jp?g|gif)$/,
+        test: /\.(png|jpe?g|gif|ico)$/,
         use: [
+          'url-loader'
+          /*
           {
             loader: 'file-loader',
             options: {
               name: 'images/[name].[ext]'
             }
           }
+          */
         ]
       }
     ]
   },
   plugins: [
+    new CleanPlugin,
     new OptimizeCSSAssetsPlugin,
-    /*new MiniCSSExtractPlugin({
+    new MiniCSSExtractPlugin({
       filename: '[name]-[contenthash].css'
-    }),*/
+    }),
     new webpack.EnvironmentPlugin(['NODE_ENV']),
     //new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      inject: true
+      template: __dirname + '/src/index.html',
+      inject: true,
       //template: __dirname + '/public/index.html',
-      //filename: 'index.html',
+      filename: 'index.html',
       //inject: 'body'
     }),
     new UglifyJSPlugin()

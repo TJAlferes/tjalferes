@@ -1,0 +1,47 @@
+#sites {
+  width: 1200px;
+  padding: 20px;
+}
+#sites h1 {
+  margin-bottom: 8px;
+}
+
+/* mobile */
+@media (max-width: 599px) {
+  #sites {
+    width: 320px;
+  }
+  #site a img {
+    max-width: 260px;
+  }
+}
+
+/* tablet (portrait) */
+@media (min-width: 600px) {
+  #sites {
+    width: 560px;
+  }
+  #site a img {
+    max-width: 560px;
+  }
+}
+
+/* tablet (landscape)*/
+@media (min-width: 900px) {
+  #sites {
+    width: 560px;
+  }
+  #site a img {
+    max-width: 560px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  #sites {
+    width: 1200px;
+  }
+  #site a img {
+    max-width: 900px;
+  }
+}
