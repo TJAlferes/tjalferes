@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
+//const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -12,13 +12,15 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
-  entry: './src/main.js',
+  entry: {
+    main: ['./src/main.js']
+  },
   output: {
+    filename: '[name]-bundle.js',
+    //filename: 'bundle.js',
+    //chunkFilename: '[id].js',
     path: path.resolve(__dirname, 'dist'),
     //path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js',
-    chunkFilename: '[id].js',
-    filename: '[name]-bundle.js',
     publicPath: '/'
   },
   module: {
@@ -43,7 +45,6 @@ module.exports = {
       */
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
           'style-loader',
           {
@@ -71,7 +72,6 @@ module.exports = {
           */
         ]
       },
-      /*
       {
         test: /\.html$/,
         use: [
@@ -83,7 +83,6 @@ module.exports = {
           }
         ]
       },
-      */
       /*
       {
         test: /\.hbs$/,
@@ -113,13 +112,14 @@ module.exports = {
       filename: '[name]-[contenthash].css'
     }),*/
     new webpack.EnvironmentPlugin(['NODE_ENV']),
-    new UglifyJSPlugin(),
     //new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      //template: './public/index.html',
-      template: __dirname + '/public/index.html',
-      filename: 'index.html',
-      inject: 'body'
-    })
+      template: './public/index.html',
+      inject: true
+      //template: __dirname + '/public/index.html',
+      //filename: 'index.html',
+      //inject: 'body'
+    }),
+    new UglifyJSPlugin()
   ]
 };

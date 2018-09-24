@@ -2,7 +2,7 @@
   "name": "tjalferes-com",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server/main.js",
+  "private": true,
   "scripts": {
     "build": "SET NODE_ENV=production && webpack --config=webpack.prod.js --progress --profile --color",
     "dev": "nodemon --inspect --watch webpack.dev.js --watch src/main.js src/server/devServer.js",
