@@ -28,7 +28,20 @@
     </header>
     <main>
       <div id="painting">
-        <img src="../../../images/paintings/still-life/t-j-alferes-painting-still-life-emptiness-2014.jpg">
+        <img
+          srcset="
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-emptiness-2014-280px.jpg 280w,
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-emptiness-2014-400px.jpg 400w,
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-emptiness-2014-1200px.jpg 1200w
+          "
+          sizes="
+            (max-width: 599px) 280px,
+            (max-width: 1199px) 400px,
+            (min-width: 1200px) 1200px
+          "
+          src="../../../images/paintings/still-life/t-j-alferes-painting-still-life-emptiness-2014-280px.jpg"
+          alt="Emptiness"
+        >
         <span id="name">Emptiness</span>
         <span id="info">2014, 16 by 20 inches, oil on linen</span>
       </div>

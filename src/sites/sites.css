@@ -5,14 +5,19 @@
 #sites h1 {
   margin-bottom: 8px;
 }
+.site,
+.site a,
+.site a img {
+  width: 100%;
+}
 
 /* mobile */
 @media (max-width: 599px) {
   #sites {
     width: 320px;
   }
-  #site a img {
-    max-width: 260px;
+  .site a img {
+    width: 280px;
   }
 }
 
@@ -21,8 +26,8 @@
   #sites {
     width: 560px;
   }
-  #site a img {
-    max-width: 560px;
+  .site a img {
+    width: 448px;
   }
 }
 
@@ -31,8 +36,8 @@
   #sites {
     width: 560px;
   }
-  #site a img {
-    max-width: 560px;
+  .site a img {
+    width: 448px;
   }
 }
 
@@ -41,7 +46,7 @@
   #sites {
     width: 1200px;
   }
-  #site a img {
-    max-width: 900px;
+  .site a img {
+    width: 448px;
   }
 }

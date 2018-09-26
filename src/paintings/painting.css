@@ -1,5 +1,8 @@
+main {
+  background-color: #000;
+}
 #painting {
-  padding: 20px;
+  padding: 20px 0;
   background-color: #000;
 }
 #painting img {

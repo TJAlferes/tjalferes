@@ -24,16 +24,22 @@ body {
   padding-top: 20px;
 }
 */
+
+#web {
+  width: 320px;
+  padding: 20px;
+}
+
 .languages,
 .tools {
-  width: 320px;
+  width: 280px;
   margin: 20px auto 0 auto;
 }
 .topic a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 260px;
   height: 112px;
   margin: 0 auto 10px auto;
   border: 1px solid #fff;
@@ -52,27 +58,27 @@ body {
   width: 100px;
   height: max-content;
 }
+
 .topic_title {
-  font-size: 1.4rem;
 }
 h1 {
   margin: 0 auto 16px auto;
-  font-size: 2.6rem;
 }
 h2 {
   margin-bottom: 8px;
-  font-size: 2rem;
 }
 img {
   margin: 0 auto 0 auto;
 }
 p {
-  font-size: 1.4rem;
 }
 
 /* mobile */
 @media (max-width: 599px) {
-
+  #web {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* tablet (portrait) */
@@ -82,7 +88,7 @@ p {
 
 /* tablet (landscape)*/
 @media (min-width: 900px) {
-  
+
 }
 
 /* desktop */

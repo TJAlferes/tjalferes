@@ -1,5 +1,5 @@
 #thumbs {
-  width: 482px;;
+  width: 482px;
   padding: 20px;
 }
 #thumbs a {
@@ -33,4 +33,39 @@
   background-color: #2b2b2b;
   cursor: pointer;
   cursor: hand;
+}
+
+/* mobile */
+@media (max-width: 599px) {
+  #thumbs {
+    width: 100%;
+  }
+  .thumb {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .thumb a {
+    width: 100%;
+  }
+}
+
+/* tablet (portrait) */
+@media (min-width: 600px) {
+  #thumbs {
+    width: 482px;
+  }
+}
+
+/* tablet (landscape)*/
+@media (min-width: 900px) {
+  #thumbs {
+    width: 482px;
+  }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  #thumbs {
+    width: 482px;
+  }
 }

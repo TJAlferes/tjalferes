@@ -28,7 +28,20 @@
     </header>
     <main>
       <div id="painting">
-        <img src="../../../images/paintings/still-life/t-j-alferes-painting-still-life-rotting-mirepoix-2015.jpg">
+        <img
+          srcset="
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-rotting-mirepoix-2015-280px.jpg 280w,
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-rotting-mirepoix-2015-400px.jpg 400w,
+            ../../../images/paintings/still-life/t-j-alferes-painting-still-life-rotting-mirepoix-2015-1200px.jpg 1200w
+          "
+          sizes="
+            (max-width: 599px) 280px,
+            (max-width: 1199px) 400px,
+            (min-width: 1200px) 1200px
+          "
+          src="../../../images/paintings/still-life/t-j-alferes-painting-still-life-rotting-mirepoix-2015-280px.jpg"
+          alt="Rotting Mirepoix"
+        >
         <span id="name">Rotting Mirepoix</span>
         <span id="info">2015, 16 by 20 inches, oil on linen</span>
       </div>

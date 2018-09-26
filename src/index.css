@@ -82,11 +82,11 @@ footer {
 /* tablet (portrait) */
 @media (min-width: 600px) {
   .container {
-    grid-template-rows: 117px auto 92px;
+    grid-template-rows: 92px auto 92px;
   }
   .header-top {
-    justify-content: center;
-    height: 42px;
+    justify-content: flex-start;
+    height: 21px;
   }
 }
 
