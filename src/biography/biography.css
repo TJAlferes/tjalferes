@@ -1,15 +1,22 @@
 .biography {
   width: 320px;
   padding: 20px;
+  border-left: 33px solid;
+  border-image-source: url(../images/wallpaper-tile.png);
+  border-image-slice: 33;
+  border-image-repeat: repeat;
 }
+
 .biography a {
   font-style: italic;
 }
+
 .biography img {
   float: left;
   margin-top: 10px;
   margin-right: 10px;
 }
+
 #name {
   font-weight: 900;
 }

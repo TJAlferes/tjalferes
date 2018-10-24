@@ -13,26 +13,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^9.1.5",
-    "babel-loader": "^8.0.2",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
     "css-loader": "^1.0.0",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "extract-loader": "^3.0.0",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
-    "mini-css-extract-plugin": "^0.4.3",
+    "mini-css-extract-plugin": "^0.4.4",
+    "nuxt": "^2.2.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "postcss": "^7.0.2",
-    "require-dir": "^1.0.0",
+    "postcss": "^7.0.5",
+    "require-dir": "^1.1.0",
     "rimraf": "^2.6.2",
-    "style-loader": "^0.23.0",
+    "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.1"
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
@@ -41,9 +42,9 @@
     "nodemon": "^1.18.4",
     "postcss-loader": "^3.0.0",
     "precss": "^3.1.2",
-    "url-loader": "^1.1.1",
-    "webpack-bundle-analyzer": "^3.0.2",
-    "webpack-dev-middleware": "^3.3.0",
-    "webpack-hot-middleware": "^2.24.2"
+    "url-loader": "^1.1.2",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
   }
 }
