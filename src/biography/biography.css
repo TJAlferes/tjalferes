@@ -1,10 +1,6 @@
 .biography {
-  width: 320px;
+  width: 300px;
   padding: 20px;
-  border-left: 33px solid;
-  border-image-source: url(../images/wallpaper-tile.png);
-  border-image-slice: 33;
-  border-image-repeat: repeat;
 }
 
 .biography a {
