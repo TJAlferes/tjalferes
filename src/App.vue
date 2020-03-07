@@ -1,30 +1,29 @@
 <template>
-  <div id="app">
+  <div class="app">
 
-    <header>
-      <div class="header-top">
-        <a href="/index.html" id="current-page">HOME</a>
-        <a href="/biography/biography.html">BIOGRAPHY</a>
-        <a href="/paintings/paintings.html">PAINTINGS</a>
-        <a href="/sites/sites.html">SITES</a>
-        <a href="/articles/articles.html">ARTICLES</a>
-        <a href="/books/books.html">BOOKS</a>
+    <header class="header">
+      <div class="header__top">
+        <router-link exact to="/home" id="current-page">HOME</router-link>
+        <router-link exact to="/bio">BIOGRAPHY</router-link>
+        <router-link exact to="/oil-paintings">OIL PAINTINGS</router-link>
+        <router-link exact to="/web-apps">WEB APPS</router-link>
+        <router-link exact to="/articles">ARTICLES</router-link>
+        <!--<router-link exact to="/books">BOOKS</a>-->
+        <!--<router-link exact to="/contact">CONTACT</router-link>-->
       </div>
-      <div class="header-bottom">
+      <div class="header__bottom">
         <div class="logo">
-          <span class="website-title">TJALFERES.net</span>
-          <span class="website-subtitle">Website of Timothy James Alferes</span>
+          <span class="website__title">TJALFERES.net</span>
+          <span class="website__subtitle">Website of Timothy James Alferes</span>
         </div>
       </div>
     </header>
 
-    <main>
-      <div id="home">
-        <h1>EDIT</h1>
-      </div>
+    <main class="main">
+      <router-view class="router-view"></router-view>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div id="social-media-links">
         <a href="https://github.com/TJAlferes">
           <img src="/images/github-logo-24px.png" alt="GitHub">
