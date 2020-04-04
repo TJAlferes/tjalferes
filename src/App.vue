@@ -3,11 +3,11 @@
 
     <header class="header">
       <div class="header__top">
-        <router-link exact to="/home" id="current-page">HOME</router-link>
+        <router-link exact to="/home">HOME</router-link>
         <router-link exact to="/bio">BIOGRAPHY</router-link>
-        <router-link exact to="/oil-paintings">OIL PAINTINGS</router-link>
-        <router-link exact to="/web-apps">WEB APPS</router-link>
-        <router-link exact to="/articles">ARTICLES</router-link>
+        <router-link exact to="/paintings/all">PAINTINGS</router-link>
+        <router-link exact to="/webapps">WEB APPS</router-link>
+        <router-link exact to="/articles/all">ARTICLES</router-link>
         <!--<router-link exact to="/books">BOOKS</a>-->
         <!--<router-link exact to="/contact">CONTACT</router-link>-->
       </div>
@@ -41,11 +41,13 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 
-export default {
-  
-};
-
+export default defineComponent({
+  setup() {
+    console.log('hi');
+  }
+});
 </script>
 
 <style lang="postcss">

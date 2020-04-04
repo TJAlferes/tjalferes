@@ -1,5 +1,5 @@
 <template>
-  <div class="oil-painting"></div>
+  <div class="painting"></div>
 </template>
 
 <script lang="ts">
@@ -11,12 +11,12 @@ main {
   background-color: #000;
 }
 
-.oil-painting {
+.painting {
   padding: 20px 0;
   background-color: #000;
 }
 
-.oil-painting img {
+.painting img {
   display: block;
   margin: 0 auto;
   padding-bottom: 4px;
