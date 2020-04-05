@@ -1,7 +1,7 @@
 {
-  "name": "tjalferes-com",
+  "name": "tjalferes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website of Timothy James Alferes",
   "private": true,
   "scripts": {
     "build": "SET NODE_ENV=production && webpack --config=webpack.prod.js --progress --profile --color",
